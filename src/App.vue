@@ -1,27 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <div class="toolbar">
+      <div class="left">
+        <span class="toolbar-item">Accueil</span>
+      </div>
+      <div class="right">
+        <span class="toolbar-item">Projets</span>
+        <span class="toolbar-item">Compétences</span>
+        <span class="toolbar-item">
+          <i class="material-icons">mail_outline</i>
+        </span>
+      </div>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
+import Home from './components/Home.vue'
+
 export default {
   name: 'app',
+  components: {
+    Home
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -31,15 +33,40 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  margin: 0;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
+.toolbar {
+  position: absolute;
+  height: 112px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.toolbar .toolbar-item {
+  margin: 40px;
+}
+
+.toolbar .right .toolbar-item {
+  margin: 0;
+  margin-right: 40px;
+}
+
+.toolbar .toolbar-item {
+  display: inline-flex;
+  vertical-align: middle;
+}
 h1, h2 {
   font-weight: normal;
 }

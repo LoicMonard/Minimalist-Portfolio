@@ -9,7 +9,7 @@
             <span class="display">Bienvenue</span><br>
             <span class="subtitle">Jeune développeur, j'essaie de devenir un vieux développeur.</span>
             <div class="discover">
-                <span><i class="material-icons">arrow_forward</i> Me voir nu</span>
+                <router-link to="Projects"><span><i class="material-icons">arrow_forward</i> Me voir nu</span></router-link>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@ export default {
 .right {
     width: 80%;
     background-image: url("../assets/glen-carrie-2092-unsplash.jpg");
-    background-position: right;
+    background-position: top;
     background-size: cover;
 }
 .pitch {
@@ -68,6 +68,12 @@ export default {
   height: 80px;
   line-height: 80px;
   font-size: 20px;
+  margin-left: 0px;
+  transition: margin-left .3s ease;
+  cursor: pointer;
+}
+.discover:hover {
+    margin-left: 20px;
 }
 .discover i {
   font-size: 20px;

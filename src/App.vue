@@ -6,7 +6,7 @@
       </div>
       <div class="right">
         <router-link to="Projects"><span class="toolbar-item">Projets</span></router-link>
-        <span class="toolbar-item">Compétences</span>
+        <router-link to="Skills"><span class="toolbar-item">Compétences</span></router-link>
         <span class="toolbar-item">
           <i class="material-icons">mail_outline</i>
         </span>
@@ -86,7 +86,7 @@ a {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: all .3s;
+  transition: all .2s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   transform: translateX(10%);

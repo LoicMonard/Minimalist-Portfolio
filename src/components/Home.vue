@@ -9,7 +9,7 @@
             <span class="display">Bienvenue</span><br>
             <span class="subtitle">Jeune développeur, j'essaie de devenir un vieux développeur.</span>
             <div class="discover">
-                <router-link to="Projects"><span><i class="material-icons">arrow_forward</i> Me voir nu</span></router-link>
+                <router-link to="Projects"><span><i class="material-icons">arrow_forward</i> Me découvrir</span></router-link>
             </div>
         </div>
     </div>

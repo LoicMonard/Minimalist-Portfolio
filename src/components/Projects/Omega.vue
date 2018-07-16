@@ -27,7 +27,7 @@ Le projet nous a été initialement proposé par un client, Adjévi Koudossou en
     <h3>Les acteurs</h3>
     <ul>
       <li>Le principal acteur du projet n’était autre que l’équipe de projet.</li>
-      <li>Les seconds acteurs étaient les professeurs de l’écoles, qui s’assuraient du bon déroulement du projet.</li>
+      <li>Les seconds acteurs étaient les professeurs de l’école, qui s’assuraient du bon déroulement du projet.</li>
       <li>Les derniers acteurs étaient les utilisateurs qui étaient chargés d’utiliser l’application et de faire remonter les idées et les bugs.</li>
     </ul>
     <h3>Les résultats</h3>

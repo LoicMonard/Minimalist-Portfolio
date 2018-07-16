@@ -29,7 +29,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       projects: [
-        {name: 'Omega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Omega', description: `Single Page Application`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}, {name: '.NET Core', color:'#6919E6'}, {name: 'Azure Storage', color:'#0078D4'}]},
         {name: 'Pomega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
         {name: 'Momega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
         {name: 'Somega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
@@ -55,15 +55,21 @@ export default {
 }
 .left {
   padding: 0 20px;
-  width: 40%;
+  flex-grow: 1;
   display: flex;
   font-size: 64px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
 }
 .right {
   padding: 0 20px;
-  width: 60%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%;
 }
 .project {
   display: flex;
@@ -96,6 +102,18 @@ export default {
   display: inline-flex;
   vertical-align: middle;
   font-size: 16px !important;
-  
+}
+@media screen and (max-width: 1200px) {
+  .projects-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .projects-container {
+    padding: 5% 0;
+  }
+  .left {
+    font-size: 34px;
+  }  
 }
 </style>

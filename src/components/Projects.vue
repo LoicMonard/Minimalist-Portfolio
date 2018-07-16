@@ -11,9 +11,12 @@
           <span class="project-description">
             {{project.description}}
           </span>
-          <span class="project-technologies">
-            {{project.technologies}}
-          </span>
+          <div class="project-technologies">
+            <span v-for="technology in project.technologies" :key="technology.name">
+              <i class="material-icons" v-bind:style="{color: technology.color}">fiber_manual_record</i>
+              {{technology.name}}
+            </span>
+          </div>
         </router-link>
       </div>
     </div>
@@ -26,16 +29,16 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       projects: [
-        {name: 'Omega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Pomega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Momega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Somega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Domega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Comega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Lomega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Gomega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Bomega', description: `Hey girl`, technologies: 'Vue.js'},
-        {name: 'Romega', description: `Hey girl`, technologies: 'Vue.js'}
+        {name: 'Omega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Pomega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Momega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Somega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Domega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Comega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Lomega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Gomega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Bomega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]},
+        {name: 'Romega', description: `Hey girl`, technologies: [{name: 'Vue.js', color: '#41B883'}, {name: 'Javascript',  color: '#F1E05A'}]}
       ]
     }
   }
@@ -80,7 +83,19 @@ export default {
   font-family: 'Montserrat Light', 'Avenir';
 }
 .project-technologies {
+  display: flex;
+  flex-direction: row;
   font-size: 12px;
+  line-height: 14px;
   font-family: 'Montserrat Light', 'Avenir';
+}
+.project-technologies span:not(:nth-child(1)) {
+  margin-left: 4px;
+}
+.project-technologies i {
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 16px !important;
+  
 }
 </style>
